@@ -19,25 +19,17 @@ The tool supports remapping ntdll.dll using a process created in debug mode. For
 
 ## Usage
 
-Compile the binary with:
-
 ```
-nim c --cpu:amd64 --opt:size --d:release nimdump.nim
+nimdump.exe [-r] [-o:OUTPUT_FILE ]
 ```
 
-The syntax is:
+- **-r**: Remap the ntdll.dll library
 
-```
-nimdump.exe [-r] [-o:OUTPUTFILE ]
-```
-
-- **Remap ntdll** (-r, optional): Remap the ntdll.dll library
-
-- **Output file** (-o, optional): Dump file name
+- **-o**: Dump file name
 
 <br>
 
-By default it creates a file named "n1m.dmp":
+It creates a file named "n1m.dmp" by default:
 
 ```
 nimdump.exe
@@ -52,5 +44,34 @@ nimdump.exe -r -o:document.docx
 ```
 
 ![img2](https://raw.githubusercontent.com/ricardojoserf/ricardojoserf.github.io/refs/heads/master/images/nativedump/nim_2.png)
+
+<br>
+
+------------------
+
+## Compilation
+
+In Windows, install the necessary libraries and compile the binary with:
+
+```
+nimble install winim zippy
+nim c --cpu:amd64 --opt:size --d:release nimdump.nim
+```
+
+In Linux, install the compiler, nim and the necessary libraries:
+
+```
+sudo apt install mingw-w64
+curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+source ~/.profile
+export PATH=$HOME/.nimble/bin:$PATH
+nimble install winim zippy
+```
+
+Finally, cross-compile the binary:
+
+```
+nim c --cpu:amd64 --opt:size --d:release --os:windows --gcc.exe:x86_64-w64-mingw32-gcc --gcc.linkerexe:x86_64-w64-mingw32-gcc nimdump.nim
+```
 
 <br>
