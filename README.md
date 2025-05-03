@@ -74,4 +74,13 @@ Finally, cross-compile the binary:
 nim c --cpu:amd64 --opt:size --d:release --os:windows --gcc.exe:x86_64-w64-mingw32-gcc --gcc.linkerexe:x86_64-w64-mingw32-gcc nimdump.nim
 ```
 
+
 <br>
+
+------------------
+
+## Notes
+
+- This is a port of NativeDump so it only works if PPL is not enabled
+
+- It works fine in latest Windows 10 but fails in some Windows 11 versions
