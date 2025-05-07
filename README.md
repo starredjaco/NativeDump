@@ -30,3 +30,11 @@ Decoder.exe salaries.xlsx file.dmp NativeDump2024
 ```
 
 ![c4](https://raw.githubusercontent.com/ricardojoserf/ricardojoserf.github.io/master/images/nativedump/Screenshot_C4.png)
+
+-----------------------------
+
+## TrickDump
+
+For an alternative approach that avoids creating a Minidump file, check out [TrickDump](https://github.com/ricardojoserf/trickdump/): it generates three JSON files and a ZIP archive, and the Minidump is reconstructed on the attacker's machine. This can help evade security solutions that monitor for Minidump creation or exfiltration.
+
+If you like C, check the [c-flavour](https://github.com/ricardojoserf/TrickDump/tree/c-flavour) branch!
