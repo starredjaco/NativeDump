@@ -44,3 +44,11 @@ In this example, the ntdll.dll library is overwritten from a debug process, the 
 The Netcat listener receives the file correctly:
 
 ![dumpfile](https://raw.githubusercontent.com/ricardojoserf/ricardojoserf.github.io/master/images/nativedump/Screenshot_Python4.png)
+
+-----------------------------
+
+## TrickDump
+
+For an alternative approach that avoids creating a Minidump file, check out [TrickDump](https://github.com/ricardojoserf/trickdump/): it generates three JSON files and a ZIP archive, and the Minidump is reconstructed on the attacker's machine. This can help evade security solutions that monitor for Minidump creation or exfiltration.
+
+If you like Python, check the [python-flavour](https://github.com/ricardojoserf/TrickDump/tree/python-flavour) branch!
