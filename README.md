@@ -84,3 +84,13 @@ nim c --cpu:amd64 --opt:size --d:release --os:windows --gcc.exe:x86_64-w64-mingw
 - This is a port of NativeDump so it only works if PPL is not enabled
 
 - It works fine on the latest versions of Windows 10 and 11, and has been tested successfully against common AV and EDR solutions.
+
+<br>
+
+-----------------------------
+
+## TrickDump
+
+For an alternative approach that avoids creating a Minidump file, check out [TrickDump](https://github.com/ricardojoserf/trickdump/): it generates three JSON files and a ZIP archive, and the Minidump is reconstructed on the attacker's machine. This can help evade security solutions that monitor for Minidump creation or exfiltration.
+
+If you like Nim, check the [nim-flavour](https://github.com/ricardojoserf/TrickDump/tree/nim-flavour) branch!
