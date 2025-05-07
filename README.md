@@ -72,6 +72,17 @@ crystal build crystaldump.cr --release
 
 <br>
 
+-----------------------------
+
+## TrickDump
+
+For an alternative approach that avoids creating a Minidump file, check out [TrickDump](https://github.com/ricardojoserf/trickdump/): it generates three JSON files and a ZIP archive, and the Minidump is reconstructed on the attacker's machine. This can help evade security solutions that monitor for Minidump creation or exfiltration.
+
+If you like Crystal, check the [crystal-flavour](https://github.com/ricardojoserf/TrickDump/tree/crystal-flavour) branch!
+
+
+<br>
+
 ------------------
 
 ## References
