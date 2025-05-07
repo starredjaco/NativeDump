@@ -75,9 +75,12 @@ execute_bof nativedump_bof.o --format-string zzz <OVERWRITE_TECHNIQUE> <FILENAME
 
 ![bof4](https://raw.githubusercontent.com/ricardojoserf/ricardojoserf.github.io/master/images/nativedump/Screenshot_BOF4.png)
 
---------------
+<br>
 
-## ⭐ Support This Project by Starring the Repository!
+-----------------------------
 
-If you find this project helpful or interesting, please consider giving it a star 🌟 on GitHub!
+## TrickDump
 
+For an alternative approach that avoids creating a Minidump file, check out [TrickDump](https://github.com/ricardojoserf/trickdump/): it generates three JSON files and a ZIP archive, and the Minidump is reconstructed on the attacker's machine. This can help evade security solutions that monitor for Minidump creation or exfiltration.
+
+If you like BOF files, check the [bof-flavour](https://github.com/ricardojoserf/TrickDump/tree/bof-flavour) branch!
