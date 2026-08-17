@@ -28,6 +28,7 @@ Some benefits of this technique are:
 - It only uses functions from Ntdll.dll, so it is possible to bypass API hooking by remapping the library
 - The Minidump file does not have to be written to disk, you can transfer its bytes (encoded or encrypted) to a remote machine
 
+
 You can find the project in different "flavours" (or languages):
 
 - [main](https://github.com/ricardojoserf/NativeDump/tree/main) - **.NET** basic implementation (this branch)
@@ -46,6 +47,8 @@ You can find the project in different "flavours" (or languages):
 
 - [nim-flavour](https://github.com/ricardojoserf/NativeDump/tree/nim-flavour) - **Nim** implementation with ntdll.dll overwrite capabilities
 
+- [deno-flavour](https://github.com/ricardojoserf/NativeDump/tree/deno-flavour) - **Deno** implementation with 3 ntdll.dll over write methods + Exfiltrate to remote machine
+
   
 Other interesting branches using .NET:
 
@@ -55,6 +58,7 @@ Other interesting branches using .NET:
 
 - [peb-unreadable](https://github.com/ricardojoserf/NativeDump/tree/peb-unreadable) - Implementation without reading lsass' PEB structure + 3 ntdll.dll overwrite methods
 
+- [debug](https://github.com/ricardojoserf/NativeDump/tree/debug) - Verbose debug version with 3 ntdll.dll overwrite methods + Exfiltrate to remote machine
 
 <!-- - [ntdlloverwrite](https://github.com/ricardojoserf/NativeDump/tree/ntdlloverwrite) - Overwrite ntdll.dll library using a clean version from a DLL file already on disk -->
 
